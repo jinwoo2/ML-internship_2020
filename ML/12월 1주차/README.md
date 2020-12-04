@@ -9,6 +9,8 @@
 
 검은색 카트(Cart) 위에 막대기(Pole)를 살짝 올려 놓고
 검은색 카트를 좌우로 움직여서 막대기가 쓰러지지 않도록 하는 것이 목표다.
+
+
 ![noname01](https://user-images.githubusercontent.com/38103094/101144968-71dafc00-365c-11eb-831b-88f12ae03b97.png)
 
 
@@ -21,6 +23,8 @@ A = {0, 1}
 
 
 그리고 카트의 위치를 나타내는 on_space의 범위를 보면 -48에서 4.8의 범위를 가지는 것을 확인 할 수 있다. 
+
+
 ![noname01](https://user-images.githubusercontent.com/38103094/101145083-9f27aa00-365c-11eb-8d3e-c7205e96cdcc.png)
 
 
@@ -30,12 +34,16 @@ A = {0, 1}
 
 
 에러 해결
+
+
 ![noname01](https://user-images.githubusercontent.com/38103094/101145112-ac449900-365c-11eb-98f3-f30e9ebf9daf.png)
 
 
 계속해서 env.render에 에러가 나와 아나콘다 환경에 gym을 설치하고 주피터를 연결하는 방식으로 해결하고자 했다.
 
 아나콘다에 gym환경 만들고 주피터를 연결시킨다
+
+
 ![noname01](https://user-images.githubusercontent.com/38103094/101145150-b9fa1e80-365c-11eb-86f7-4e9f2243be32.png)
 
 
@@ -72,6 +80,8 @@ for i in range(100):
         print(i+1)
         break
 env.close()
+
+
 ![noname01](https://user-images.githubusercontent.com/38103094/101145296-edd54400-365c-11eb-8591-73e5ecd34b23.png)
 
  .i번 횟수를 보면 26번 째에 멈추는 것을 확인할 수 있다.
