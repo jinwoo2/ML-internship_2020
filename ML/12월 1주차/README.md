@@ -52,6 +52,8 @@ A = {0, 1}
 
 <공학에서는 라디안을 많이 써서 라디안으로 그냥 받아들였는데 확실히 알고자 찾아본 결과 라디안이 맞았다.>
 행동 1을 줬을 때 오른쪽으로 가고 막대기는 
+
+
 ![noname01](https://user-images.githubusercontent.com/38103094/101145185-c9796780-365c-11eb-8b9a-dc7ea78f1507.png)
 
 
@@ -104,13 +106,13 @@ keras.Sequential( [  이 함수는 [] 내부에 layer는 연속적이게 쌓아�
  ])
 이런식으로 간단하게 구현 할 수 있다.
 이에 아래와 같은 예제코드로 층을 여러개 구현할 수 있다.
-
+64개의 유닛을 가진 완전 
 
 model = tf.keras.Sequential([
-# 64개의 유닛을 가진 완전 연결 층을 모델에 추가합니다:
+//  64개의 유닛을 가진 완전 연결 층을 모델에 추가합니다:
 layers.Dense(64, activation='relu', input_shape=(32,)),
-# 또 하나를 추가합니다:
+//  또 하나를 추가합니다:
 layers.Dense(64, activation='relu'),
-# 10개의 출력 유닛을 가진 소프트맥스 층을 추가합니다:
+//  10개의 출력 유닛을 가진 소프트맥스 층을 추가합니다:
 layers.Dense(10, activation='softmax')])
 
