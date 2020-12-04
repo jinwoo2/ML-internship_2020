@@ -111,7 +111,6 @@ keras.Sequential( [
  
 이런식으로 간단하게 구현 할 수 있다.
 이에 아래와 같은 예제코드로 층을 여러개 구현할 수 있다.
-64개의 유닛을 가진 완전 
 
 model = tf.keras.Sequential([
 
