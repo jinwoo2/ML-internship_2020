@@ -5,8 +5,11 @@
 
 
 ![noname01](https://user-images.githubusercontent.com/38103094/101144915-5ff95900-365c-11eb-9749-992ad91547b7.png)
+
+
 검은색 카트(Cart) 위에 막대기(Pole)를 살짝 올려 놓고
 검은색 카트를 좌우로 움직여서 막대기가 쓰러지지 않도록 하는 것이 목표다.
+![noname01](https://user-images.githubusercontent.com/38103094/101144968-71dafc00-365c-11eb-831b-88f12ae03b97.png)
 
 
 먼저 cartpole 환경과 상태의 정보를 먼저 보면
@@ -14,8 +17,12 @@
 
 위에 Action space에 2개의 액션은  left right이다.
 A = {0, 1} 
+![noname01](https://user-images.githubusercontent.com/38103094/101145026-8919e980-365c-11eb-8335-bc5e2f571959.png)
+
 
 그리고 카트의 위치를 나타내는 on_space의 범위를 보면 -48에서 4.8의 범위를 가지는 것을 확인 할 수 있다. 
+![noname01](https://user-images.githubusercontent.com/38103094/101145083-9f27aa00-365c-11eb-8d3e-c7205e96cdcc.png)
+
 
  지금 보이는 observation 값에 들어간 변수들이 무엇인지를 파악을 해야한다.
  각각  [ 카트의 위치, 카트의 속도, 막대기의 각도, 막대기의 회전율 ]을 의미한다.
@@ -23,19 +30,22 @@ A = {0, 1}
 
 
 에러 해결
+![noname01](https://user-images.githubusercontent.com/38103094/101145112-ac449900-365c-11eb-98f3-f30e9ebf9daf.png)
+
 
 계속해서 env.render에 에러가 나와 아나콘다 환경에 gym을 설치하고 주피터를 연결하는 방식으로 해결하고자 했다.
 
-
-
 아나콘다에 gym환경 만들고 주피터를 연결시킨다
+![noname01](https://user-images.githubusercontent.com/38103094/101145150-b9fa1e80-365c-11eb-86f7-4e9f2243be32.png)
+
 
      ---------------------------에러 해결----------------------------
 위 코드는 행동 0은 카트에 왼쪽 방향으로 힘을 가하는 것이다. (1은 오른쪽 방향으로 힘을 받는다 ) 막대기가 카트의 진행방향과 반대방향(시계 방향 회전CW)으로 떨어지는 것을 확인 할 수 있다. 보면 막대기의 각도는 3번째 변수를 보면 되는데 -0.03 -> 0.236  대략 0.239 (대략 13도)
 
 <공학에서는 라디안을 많이 써서 라디안으로 그냥 받아들였는데 확실히 알고자 찾아본 결과 라디안이 맞았다.>
-
 행동 1을 줬을 때 오른쪽으로 가고 막대기는 
+![noname01](https://user-images.githubusercontent.com/38103094/101145185-c9796780-365c-11eb-8b9a-dc7ea78f1507.png)
+
 
 여기선 막대기가 카트의 진행방향과 반대방향(반시계 방향 회전CCW)으로 떨어지는 것을 확인 할 수 있다.
 
@@ -62,7 +72,7 @@ for i in range(100):
         print(i+1)
         break
 env.close()
-
+![noname01](https://user-images.githubusercontent.com/38103094/101145296-edd54400-365c-11eb-8591-73e5ecd34b23.png)
 
  .i번 횟수를 보면 26번 째에 멈추는 것을 확인할 수 있다.
 지금 if done: 이라고 조건을 주었는데 openai에서 제공하는 cartpole은 막대기의 각도가 12도 이상 기울겄거나 카트가 2.4칸을 움직여서 화면에서 나가게 된다면 떨어졌다고 판단한다고 한다. 그러므로 done이라 함은 막대기가 떨어졌을때라고 생각하면 된다.
