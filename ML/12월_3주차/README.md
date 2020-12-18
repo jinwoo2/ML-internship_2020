@@ -1,7 +1,7 @@
 
 12월 2주차는 기말고사 시험이였다.
 
-![캡처](https://user-images.githubusercontent.com/38103094/102557893-9086cb80-410f-11eb-8645-e3560ea9fe3f.PNG)
+![캡처](https://user-images.githubusercontent.com/38103094/102561458-24f52c00-4118-11eb-964a-545f93b1cd22.PNG)
 
 환경 먼저 세팅을 해준다
 
@@ -33,8 +33,14 @@ Cart-Pole의 상태는 4차원 벡터(배열)로 각 값은 다음과 같은 의
 
 그러니 신경망으로 만들어서 cart-pole을 해결해야 한다.
 
+![캡처](https://user-images.githubusercontent.com/38103094/102561491-39d1bf80-4118-11eb-978f-eaa5503281ad.PNG)
 
 4개의 입력층과 2개의 출력층 을 가진 신경망을 생각해보자.
-
 이 신경망을 Q라 한다. Q(s, a)에서 4개의 입력층은 s를 대신하고, 2개의 출력층은 a를 대신한다. 그리고 각 출력층의 값은 Q(s, a)의 값이 된다.
+(layer.Dense층은 fully-connected 층이라고 한다)
+      노드의 개수(뉴런 수) 24개  input_dim = 4 ----> 4개의 입력 , 활성함수는 relu  ----------1번째 층   
+      3번째 층에는 활성화 함수를 'linear'로 하였다.  디폴트 값으로 입력뉴런과 가중치로 계산된 결과값이 그대로 출력으로 나오게 하는 것이다
+      
+
+
 
