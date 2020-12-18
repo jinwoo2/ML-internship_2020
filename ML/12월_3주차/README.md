@@ -23,7 +23,7 @@ Cart-Pole의 상태는 4차원 벡터(배열)로 각 값은 다음과 같은 의
 2. right 이동
 
 
-지금까지 위에 경우의 수들로 Q-table을 만드는 것은 어렵다
+지금까지 위에 경우의 수들로 아래와 같은 Q-table을 만드는 것은 어렵다
 
 ![캡처](https://user-images.githubusercontent.com/38103094/102559565-81a21800-4113-11eb-877a-8e8841902ddd.PNG)
 
