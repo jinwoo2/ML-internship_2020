@@ -19,6 +19,8 @@
 
 위에 Action space에 2개의 액션은  left right이다.
 A = {0, 1} 
+
+
 ![noname01](https://user-images.githubusercontent.com/38103094/101145026-8919e980-365c-11eb-8335-bc5e2f571959.png)
 
 
