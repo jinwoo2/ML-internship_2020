@@ -122,7 +122,11 @@ Grid world로 환경을 구성하려 할 때 hdf5 에러가 계속 나서 에러
 
 이 부분에 대한 코드는 아래와 같다
 
-에이전트는 다음상태 next_state에 대한 행동을 정하고 샘플( s a r s' a' = sate, action, reward, next_state, next_action)을 가지고 학습을 진행한다.
+
+![캡처1](https://user-images.githubusercontent.com/38103094/103418897-05f4a080-4bd4-11eb-9ebb-d10099b92357.PNG)
+
+
+--에이전트는 다음상태 next_state에 대한 행동을 정하고 샘플( s a r s' a' = sate, action, reward, next_state, next_action)을 가지고 학습을 진행한다.--
 
 기존의 강화학습 알고리즘 
 
