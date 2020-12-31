@@ -152,19 +152,35 @@ Grid world로 환경을 구성하려 할 때 hdf5 에러가 계속 나서 에러
 ![캡처](https://user-images.githubusercontent.com/38103094/103418940-3a685c80-4bd4-11eb-8918-e8d4d0bd07fa.PNG)
 
 self.model = self.build_model()
-->build_model을 통해 얻은 model은 에이전트 내부에서 self.model이라는 변수로 사용 가능 모델을 으용해서 큐함수의 값을 얻을 수 있음. 큐함수를 통해 에이전트는 행동을 선택할 수 있는데 이제 get_action함수가 그 역할을 한다.
 
-get_action함수 스크린샷
+->build_model을 통해 얻은 model은 에이전트 내부에서 self.model이라는 변수로 사용 가능 모델을 이용해서 큐함수의 값을 얻을 수 있다. 큐함수를 통해 에이전트는 행동을 선택할 수 있는데 이제 get_action함수가 그 역할을 한다. get_action함수의 코드는 아래와 같다.
+
+
+![캡처](https://user-images.githubusercontent.com/38103094/103419267-a3040900-4bd5-11eb-96a3-1a1bc8b7ae21.PNG)
+
 
 
 q_values = self.model.predict(state)
+
 -> predict의 출력은 이중배열이다. [ [], [], [] ,[] ] 이런식이다. 그렇기에 [] , [], [], [] 와 같이 변경하기 위해 [0]을 붙인거다. 이 값은 현재 상태 state에 대한 큐함수의 값이 된다. 탐욕 정책일 때 get_action함수는 큐함수의 값 중에서 가장 큰 값을 가지는 행동을 반환한다.
 
+이제 에이전트 클래스에 환경으로부터 받은 정보를 토대로 인공신경망을 학습시키는 함수를 만들어야 한다.
+학습을 하는 핵심은 MSE로 정의한 오차함수를 최소로 하도록 인공신경망을 update하는 것이다. 
+
+순서
+  1. MSE 계산
+  2. 케라스의 model.fit을 이용해 
 MSE = (정답 - 예측)^2  = 
-수식 5.9
+![수식5 9](https://user-images.githubusercontent.com/38103094/103419417-5b31b180-4bd6-11eb-977c-2d8f1e25dbaa.jpg)
+
+(https://diane-space.tistory.com/111  케라스로 모델 생성하는 기본 조건을 잘 설명한 블로그이다.)
+
 
 샘플을 가지고 인공신경망을 업데이트하는 함수의 이름은 train_model이며, 아래와 같다.
 
+![train](https://user-images.githubusercontent.com/38103094/103419460-8a482300-4bd6-11eb-8870-047df6e03d0e.PNG)
+
+![캡처](https://user-images.githubusercontent.com/38103094/103419461-8c11e680-4bd6-11eb-932a-f2b6f868f05b.PNG)
 
 
 
