@@ -1,5 +1,5 @@
 
-시작에 앞서 cartpole 환경 먼저 세팅을 해준다
+####시작에 앞서 cartpole 환경을 먼저 세팅 해준다
 
 ![캡처](https://user-images.githubusercontent.com/38103094/102561458-24f52c00-4118-11eb-964a-545f93b1cd22.PNG)
 
