@@ -170,19 +170,18 @@ MSE = (정답 - 예측)^2  =
 
 
 
-
-
 인공신경망은 이 오차함수를 통해 업데이트를 하는 것이 학습을 하는 것이다. 케라스에서는 오차함수만 정의가 되 있다면 간단하게 업데이트를 할 수 있다.
 
 
 
 상태가치 함수는 어떤 상태가 좋은 상태인지 알려주지만 상태로 가는 방법인 행동에 대해서는 평가x, 따라서 가치함수를 구하고 높은 가치를 가지는 상태로 가기위한 행동은 따로 고려해야함. -> 이를 동시에 하기 위해 상태와 행동을 동시에 고려한 Q-Function (action-value function)을 사용함.
 
-#실제로 돌아가는 결과물이다
+###실제로 돌아가는 결과물이다
 
-![KakaoTalk_20210101_014129058](https://user-images.githubusercontent.com/38103094/103418562-916d3200-4bd2-11eb-9f2e-21eff7e0bcc0.jpg)
-
-![KakaoTalk_20210101_014129058_01](https://user-images.githubusercontent.com/38103094/103418565-9336f580-4bd2-11eb-8953-f703fe39da8b.jpg)
+![KakaoTalk_20210101_014327923](https://user-images.githubusercontent.com/38103094/103418646-ec9f2480-4bd2-11eb-8685-a193310e0d50.jpg)
 
 
-![KakaoTalk_20210101_014129058_02](https://user-images.githubusercontent.com/38103094/103418567-9500b900-4bd2-11eb-81aa-f2297b9acb6b.jpg)
+![KakaoTalk_20210101_014342521](https://user-images.githubusercontent.com/38103094/103418647-ee68e800-4bd2-11eb-80ab-055b10cd01ba.jpg)
+
+
+![KakaoTalk_20210101_014355491](https://user-images.githubusercontent.com/38103094/103418649-ef9a1500-4bd2-11eb-9665-b9a68384def2.jpg)
