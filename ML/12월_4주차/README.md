@@ -68,6 +68,12 @@ build_model함수를 2번 호출해서 model과 target_model을 생성한다.
 
 ![캡처](https://user-images.githubusercontent.com/38103094/103468563-9500e480-4d9d-11eb-8710-534633b48c47.PNG)
 
+update_target_model은 학습을 진행하는 도중에도 target_model과 model로 업데이트하는 역할을 한다. 
+
+
+![캡처](https://user-images.githubusercontent.com/38103094/103468729-a1863c80-4d9f-11eb-96f0-13b440e27d67.PNG)
+
+
 
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
