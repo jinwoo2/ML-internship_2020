@@ -23,6 +23,7 @@
 
 
 ![캡처](https://user-images.githubusercontent.com/38103094/103468340-78fc4380-4d9b-11eb-9b6c-d1b40eaddb3f.PNG)
+
 #1 번째
 
 오픈AI에서 CartPole-v1은 500번의 타임스탭으로 한정시킨 cartpole 버전이다
@@ -30,6 +31,7 @@
 위에 스크린샷을 보면 env객체로 선언하고 그 객체로 환경 정보를 가저온 것이다.
 
 ![캡처](https://user-images.githubusercontent.com/38103094/103468362-b5c83a80-4d9b-11eb-9a74-ed7520eb4944.PNG)
+
 #2 번째
 
 이 부분은 에이전트가 인공신경망을 생성하는데 필요한 상태와 행동의 크기를 불러 온 것이다.
